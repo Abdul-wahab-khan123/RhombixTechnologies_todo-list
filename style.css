@@ -1,0 +1,76 @@
+@import url('https://fonts.googleapis.com/css2?family=Outfit:wght@100..900&display=swap');
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Outfit", sans-serif;
+}
+body{
+    background: black;
+    height: 100%;
+}
+
+input,
+button{
+    outline: none;
+    box-shadow: none;
+    border: none;
+}
+
+.todo-list{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: self-start;
+    padding: 50px 0px 0px;
+}
+.todo-list .main-box{
+    background: orangered;
+    width: 30vw;
+    padding: 30px 20px;
+    border-radius: 10px;
+}
+.todo-list .main-box .row{
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    margin: 0px 0px 30px;
+    height: 45px;
+    position: relative;
+    overflow: hidden;
+}
+.todo-list .main-box .row input{
+    width: 100%;
+    border: 0;
+    height: 100%;
+    padding: 10px 15px;
+    font-size: 16px;
+    border-radius: 8px;
+}
+.todo-list .main-box .row button{
+    font-size: 16px;
+    line-height: 26px;
+    height: 100%;
+    padding: 0px 20px;
+    background: #000000;
+    border-radius: 8px;
+    color: #ffffff;
+    border: 0;
+}
+.todo-list .main-box ul{
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    padding: 0px 0px;
+    list-style: none;
+}
+.todo-list .main-box ul li{
+    background: #000;
+    padding: 10px;
+    border-radius: 8px;
+    color: #fff;
+    font-size: 16px;
+    line-height: 26px;
+    font-weight: 400;
+    text-transform: capitalize;
+}
