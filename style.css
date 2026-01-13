@@ -30,6 +30,23 @@ button{
     padding: 30px 20px;
     border-radius: 10px;
 }
+.todo-list .main-box .head {
+    display: flex;
+    align-items: self-end;
+    justify-content: start;
+    margin: 0px 0px 20px;
+    gap: 12px;
+}
+.todo-list .main-box .head img{
+    width: 50px;
+}
+
+.todo-list .main-box .head h1 {
+    font-size: 30px;
+    line-height: 40px;
+    color: #ffffff;
+    text-transform: uppercase;
+}
 .todo-list .main-box .row{
     display: flex;
     align-items: center;
@@ -65,12 +82,76 @@ button{
     list-style: none;
 }
 .todo-list .main-box ul li{
+    position: relative;
     background: #000;
-    padding: 10px;
+    padding: 10px 50px;
     border-radius: 8px;
     color: #fff;
     font-size: 16px;
     line-height: 26px;
     font-weight: 400;
     text-transform: capitalize;
+    cursor: pointer;
+    overflow: hidden;
+}
+
+.main-box ul li::before{
+    content: "";
+    position: absolute;
+    top: 11px;
+    left: 12px;
+    height: 20px;
+    width: 20px;
+    border: 2px solid #ffffff;
+    border-radius: 50%;
+    background: transparent;
+    color: transparent;
+}
+.todo-list .main-box ul li.checked{
+    color: #aaaaaa;
+    text-decoration: line-through;
+}
+.todo-list .main-box ul li.checked::before {
+    content: "\f00c";
+    font-family: "Font Awesome 6 Free";
+    font-weight: 900;
+    color: #ffffff;
+    border-color: #ffffff;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: #ff4500;
+}
+.todo-list .main-box ul li span{
+    position: absolute;
+    top: 0px;
+    right: 0px;
+    height: 45px;
+    width: 45px;
+    background: #000000;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.todo-list .main-box ul li span i{
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    height: 25px;
+    width: 25px;
+    font-size: 16px;
+    color: #fff;
+    line-height: 30px;
+    text-align: center;
+    background: transparent;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50%;
+    cursor: pointer;
+    transition: all .3s ease-in-out;
+}
+.todo-list .main-box ul li span i:hover{
+    background: #fff;
+    color: #000;
 }
